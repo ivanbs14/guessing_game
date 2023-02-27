@@ -1,0 +1,122 @@
+// reseta pré configuraçoes do html
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//personaliza a configuraçao da font para resposividade + o font-size 1.6rem do body.
+// --------->>>>>>  para cada px => rem: 5px * .75 = 3.75rem  <<<<<<<<-----------
+:root {
+    font-size: 62.5%;
+}
+
+/* Observaçoes: para alinhar o main:
+    - display: grid; trasnofrma o body em grid.
+    - place-items: center; centralizar os elemntos dentro do grid. No caso o main.
+    - o elemento main ainda vai permanecer no topo, devido o body possuir uma altura menor que a 
+    viewport. Portanto usamos: height: 100vh; para informar que o body vai ter o tamanho da tela.
+ */
+body {
+    background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+    
+    font-size: 1.2rem;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+body, button, input {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* transition suavizar passar mudar a cor do button ao passar o mause
+   cursor muda a seta para mao ao passar o mouse no button
+*/
+button {
+    background-color: #7879F1;
+    color: white;
+    font-weight: bold;
+
+    border-radius: 0 .3rem .3rem 0;
+
+    cursor: pointer;
+    
+    transition: background .3s;
+}
+
+button:hover {
+    background-color: #6363ce;
+}
+
+.hide {
+    display: none;
+}
+
+/* Observaçoes: width, ajusta o tamanho de acordo com a tela.
+    para alinhar o main: modo 1 seria: com o margin.
+    mas usamos o metodo grid no body, 
+ */
+main {
+    background: #FFFFFF;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+    border-radius: .3rem;
+
+    padding: 3rem 4rem 4rem;
+
+    width: min(26.8rem, 50%);
+
+    margin-top: -7.5rem;
+
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+
+    margim-bottom: 1.2rem;
+}
+
+/* screen1 */
+h1, p {
+    color: #34355B;
+}
+
+p {
+    opacity: 6rem;
+}
+
+/* display: flex => tirar separaçao do input, button
+ */
+form {
+    margin-top: 3.6rem;
+    display: flex;
+    justify-content: center;
+}
+
+input, button {
+    border: none;
+    padding: 1.2rem;
+}
+
+input {
+    background: #DCE2E9;
+    width: 2rem;
+
+    border-radius: .3rem 0 0 .3rem;
+}
+
+/* screen2 */
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+
+    margin-bottom: 2.45rem;
+}
+
+.screen2 button {
+    border-radius: .3rem;
+}

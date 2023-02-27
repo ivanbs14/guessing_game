@@ -1,0 +1,59 @@
+-------------->>>>    MODELO ABORDADO PARA 2 PAGINAS NO HTML  <<<<----------------
+No modelo fornecido pelo pelo design as 2 paginas possui o mesmo layout
+porem o nucleo da div é diferente.
+
+1- O que fizemos criamos 2 divs com as classes: screen 1 - screen 2
+2- E adicionamos a uma a especificaçao hide na class: screen1 hide 
+e a ativamos no CSS
+hide {
+    display: none; - onde todo o conteudo interno será oculto
+}
+3- Esta especificaçao deixa o conteudo da pagina oculto.
+4- Assim percebemos que para segunda pagina precisaria so o conteudo interno.
+5- onde acrescentamos o texto h2 e button
+
+ATENÇAO: ESTA ESPECIFICAÇAO hide VAI SER FEITA NO JS PARA QUE ESSA TRANSIÇAO 
+DE UM NUCLEO INTERNO PARA OUTRO SEJA AUTOMATICO E IMPERCEPTIVEL.
+
+--->>>  De acordo com os conceitos DOM passados (conteudo no Notion) <<<----
+              vamos conectar o html com o arqivo main.js
+
+1- na primeira pagina Scrren1, 
+    .Adicionamos um id no input
+    .Adicionamos um onclick no buttom => para receber a funçao do js.
+
+    .Na função handClck criada,
+         adicionamos um chamado para o event. desativando ele. Pois todo a tag
+         FORM se auto atualiza ao clicar no buttom, e é o que nao queremos.
+    .No onclick do button, chamamos a funçao handClick criada passando o valor event.
+    .Criamos uma variavel const para receber o valor digitado no input.
+        o input não possui valor interno como (h1, p, ...) para vizualizar o valor digitado.
+        usamos a captura pelo id: ("#inputNumber") e capturamos o valor com .value
+            exemplo:  const inputNumber = document.querySelector("#inputNumber")
+                    console.log(inputNumber.value)
+    .Para termos melhor certeza do que foi congurado printamos o valor no console.log (temporario).
+
+2- adicionando a lógica
+    .Ao clicar no buttom a primeira funçao que tem que ser executada é o numero ramdomico.
+    .Criamos a variavel para cereber o numero de tentativas
+    .Dentro da funçao handClick deve ser acrescentado um if para verificar se os numeros correspondem.
+    se sim um retorno é passado, se não outro retorno é executado.
+
+3- Aplicando eventos callback
+    .Como Melhor layout de codigo, retiramos o onclick e adicionamos um id nos button
+    .Renomeamos a funçao callback para handleTryclick.
+    .Criamos 2 const com os id dos button com o value: 
+        document.querySelector("#id do button")
+    .Apos criar as 2 const, chamamos e adicionamos a propriedade como no exemplo:
+        btn.addEventListener('click', handleTryclick)
+        estamos informando que ao click no button, chamamos a funçao handleTryclick
+    .Acrescentamos com as propriedades
+        inputNumber.value = ""
+        cada vez que tentar acertar um numero, se nao acerta o campo input vai ficar vazio.
+    
+    .No evento btnReset, informamos que ao clicar no button
+        deve ser invertido as classe hide e resetado o attemps (numero de tentativas)
+
+4- Refatorando o js
+    .Organizamos a distruiçao dos codigos
+    .Adicionamos um parametro caso o usuario digite um valor menor ou abaixo do numero sorteado.
