@@ -17,7 +17,7 @@ Você pode visualizar e interagir com a pagina do projeto através
 </p>
 
 <p align="center">
-<a href="https://ivanbs14.github.io/Focus_Timer/">Click aqui </a>
+<a href="https://ivanbs14.github.io/guessing_game/">Click aqui </a>
 </p>
 
 <p align="center">
