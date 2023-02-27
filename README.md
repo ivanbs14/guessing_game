@@ -13,6 +13,14 @@ Layout UX RocketSeat.
 </p>
 
 <p align="center">
+Você pode visualizar e interagir com a pagina do projeto através 
+</p>
+
+<p align="center">
+<a href="https://ivanbs14.github.io/Focus_Timer/">Click aqui </a>
+</p>
+
+<p align="center">
   <img alt="License" src="./capa/Captura de Tela 2023-02-27 às 16.21.55.png">
   <img alt="License" src="./capa/Captura de Tela 2023-02-27 às 16.22.06.png">
 </p>
